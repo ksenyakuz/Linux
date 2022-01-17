@@ -1,0 +1,402 @@
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+examples.desktop  Документы  Изображения  Общедоступные  Шаблоны
+Видео             Загрузки   Музыка       Рабочий стол
+
+student@Ubuntu-MySQL-VirtualBox:~$ echo my first text > file1
+
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+examples.desktop  Видео      Загрузки     Музыка         Рабочий стол
+file1             Документы  Изображения  Общедоступные  Шаблоны
+
+student@Ubuntu-MySQL-VirtualBox:~$ more file1
+my first text
+
+student@Ubuntu-MySQL-VirtualBox:~$ cat /etc/* >help_etc.txt 2>error_etc.txt
+
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+error_etc.txt     help_etc.txt  Загрузки     Общедоступные
+examples.desktop  Видео         Изображения  Рабочий стол
+file1             Документы     Музыка       Шаблоны
+
+student@Ubuntu-MySQL-VirtualBox:~$ more help_etc.txt
+# /etc/adduser.conf: `adduser' configuration.
+# See adduser(8) and adduser.conf(5) for full documentation.
+
+# The DSHELL variable specifies the default login shell on your
+# system.
+DSHELL=/bin/bash
+
+# The DHOME variable specifies the directory containing users' home
+# directories.
+DHOME=/home
+
+# If GROUPHOMES is "yes", then the home directories will be created as
+# /home/groupname/user.
+GROUPHOMES=no
+
+# If LETTERHOMES is "yes", then the created home directories will have
+# an extra directory - the first letter of the user name. For example:
+# /home/u/user.
+LETTERHOMES=no
+
+# The SKEL variable specifies the directory containing "skeletal" user
+# files; in other words, files such as a sample .profile that will be
+# copied to the new user's home directory when it is created.
+SKEL=/etc/skel
+
+# FIRST_SYSTEM_[GU]ID to LAST_SYSTEM_[GU]ID inclusive is the range for UIDs
+# for dynamically allocated administrative and system accounts/groups.
+# Please note that system software, such as the users allocated by the base-pass
+wd
+# package, may assume that UIDs less than 100 are unallocated.
+
+student@Ubuntu-MySQL-VirtualBox:~$ more error_etc.txt
+cat: /etc/acpi: Это каталог
+cat: /etc/alternatives: Это каталог
+cat: /etc/apm: Это каталог
+cat: /etc/apparmor: Это каталог
+cat: /etc/apparmor.d: Это каталог
+cat: /etc/apport: Это каталог
+cat: /etc/apt: Это каталог
+cat: /etc/aptdaemon: Это каталог
+cat: /etc/at-spi2: Это каталог
+cat: /etc/avahi: Это каталог
+cat: /etc/bash_completion.d: Это каталог
+cat: /etc/binfmt.d: Это каталог
+cat: /etc/bluetooth: Это каталог
+cat: /etc/brltty: Это каталог
+cat: /etc/ca-certificates: Это каталог
+cat: /etc/calendar: Это каталог
+cat: /etc/chatscripts: Это каталог
+cat: /etc/compizconfig: Это каталог
+cat: /etc/console-setup: Это каталог
+cat: /etc/cracklib: Это каталог
+cat: /etc/cron.d: Это каталог
+cat: /etc/cron.daily: Это каталог
+cat: /etc/cron.hourly: Это каталог
+cat: /etc/cron.monthly: Это каталог
+cat: /etc/cron.weekly: Это каталог
+cat: /etc/cups: Это каталог
+cat: /etc/cupshelpers: Это каталог
+cat: /etc/dbus-1: Это каталог
+cat: /etc/dconf: Это каталог
+cat: /etc/default: Это каталог
+
+student@Ubuntu-MySQL-VirtualBox:~$ cut --help
+Использование: cut КЛЮЧ… [ФАЙЛ]…
+Печатает выбранные части строк из каждого ФАЙЛА на стандартный вывод.
+
+Если ФАЙЛ не задан или задан как -, читает стандартный ввод.
+
+Аргументы, обязательные для длинных ключей, обязательны и для коротких.
+  -b, --bytes=СПИСОК             выбрать только заданные байты
+  -c, --characters=СПИСОК        выбрать только заданные символы
+  -d, --delimiter=РАЗДЕЛИТЕЛЬ    использовать для разделения полей РАЗДЕЛИТЕЛЬ
+                                 вместо табуляции
+  -f, --fields=СПИСОК            выбрать только заданные поля; также печатать
+                                 все строки, не содержащие разделителей, если
+                                 только не задан ключ -s
+  -n                             (игнорируется)
+      --complement               дополнить множество выбранных байт, символов
+                                 или полей
+  -s, --only-delimited           не печатать строки, не содержащие
+                                 разделителей
+      --output-delimiter=СТРОКА  использовать СТРОКУ для разделения полей при
+                                 выводе, по умолчанию используется разделитель
+                                 для ввода
+  -z, --zero-terminated        разделитель строк NUL, а не символ
+                               новой строки
+      --help     показать эту справку и выйти
+      --version  показать информацию о версии и выйти
+
+Используйте один и только один из ключей -b, -c или -f.  СПИСКИ
+состоят из диапазона или нескольких диапазонов, разделенных запятыми.
+Выбранные части входного файла печатаются в том порядке, в котором они
+появляются на входе, и печатаются ровно один раз.
+Диапазоны задаются следующим образом:
+
+  Н     Н-ный байт, символ или поле; отсчитывается от 1
+  Н-    от Н-ного байта, символа или поля до конца строки
+  Н-М   от Н-ного до М-ного (включительно) байта, символа или поля
+  -М    от первого до М-ного (включительно) байта, символа или поля
+
+Оперативная справка GNU coreutils: <http://www.gnu.org/software/coreutils/>
+Об ошибках в переводе сообщений «cut» сообщайте по адресу <gnu@mx.ru>
+Полная документация: <http://www.gnu.org/software/coreutils/cut>
+или доступная локально: info '(coreutils) cut invocation'
+
+student@Ubuntu-MySQL-VirtualBox:~$ ll -ld /etc/* | cut -f1 -d " " | sort | uniq
+drwxr-s---
+drwxr-xr-x
+lrwxrwxrwx
+-r--r-----
+-r--r--r--
+-rw-------
+-rw-r-----
+-rw-r--r--
+-rw-rw-r--
+-rwxr-xr-x
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo nano /etc/ssh/sshd_config
+[sudo] пароль для student: 
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl restart sshd
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl status sshd
+● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enab
+   Active: active (running) since Чт 2022-01-13 19:24:18 MSK; 1min 14s ago
+  Process: 12717 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+ Main PID: 12719 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─12719 /usr/sbin/sshd -D
+
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox systemd[1]: Stopped OpenBSD Secure Shell
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox systemd[1]: Starting OpenBSD Secure Shel
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox sshd[12719]: Server listening on 0.0.0.0
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox sshd[12719]: Server listening on :: port
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox systemd[1]: Started OpenBSD Secure Shell
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo nano /etc/ssh/sshd_config
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl reload sshd
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl status sshd
+● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enab
+   Active: active (running) since Чт 2022-01-13 19:24:18 MSK; 3min 23s ago
+  Process: 12739 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCE
+  Process: 12737 ExecReload=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+  Process: 12717 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+ Main PID: 12719 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─12719 /usr/sbin/sshd -D
+
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox systemd[1]: Stopped OpenBSD Secure Shell
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox systemd[1]: Starting OpenBSD Secure Shel
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox sshd[12719]: Server listening on 0.0.0.0
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox sshd[12719]: Server listening on :: port
+янв 13 19:24:18 Ubuntu-MySQL-VirtualBox systemd[1]: Started OpenBSD Secure Shell
+янв 13 19:27:13 Ubuntu-MySQL-VirtualBox systemd[1]: Reloading OpenBSD Secure She
+янв 13 19:27:13 Ubuntu-MySQL-VirtualBox sshd[12719]: Received SIGHUP; restarting
+янв 13 19:27:13 Ubuntu-MySQL-VirtualBox systemd[1]: Reloaded OpenBSD Secure Shel
+янв 13 19:27:13 Ubuntu-MySQL-VirtualBox sshd[12719]: Server listening on 0.0.0.0
+янв 13 19:27:13 Ubuntu-MySQL-VirtualBox sshd[12719]: Server listening on :: port
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl restart sshd
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl status sshd
+● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enab
+   Active: active (running) since Чт 2022-01-13 19:30:00 MSK; 2s ago
+  Process: 12739 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCE
+  Process: 12737 ExecReload=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+  Process: 12754 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+ Main PID: 12757 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─12757 /usr/sbin/sshd -D
+
+янв 13 19:29:59 Ubuntu-MySQL-VirtualBox systemd[1]: Stopped OpenBSD Secure Shell
+янв 13 19:29:59 Ubuntu-MySQL-VirtualBox systemd[1]: Starting OpenBSD Secure Shel
+янв 13 19:30:00 Ubuntu-MySQL-VirtualBox sshd[12757]: Server listening on 0.0.0.0
+янв 13 19:30:00 Ubuntu-MySQL-VirtualBox sshd[12757]: Server listening on :: port
+янв 13 19:30:00 Ubuntu-MySQL-VirtualBox systemd[1]: Started OpenBSD Secure Shell
+
+student@Ubuntu-MySQL-VirtualBox:~$ cat > my_text.txt
+first line
+second line 
+third line
+
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+error_etc.txt     help_etc.txt  Документы    Музыка         Шаблоны
+examples.desktop  my_text.txt   Загрузки     Общедоступные
+file1             Видео         Изображения  Рабочий стол
+
+student@Ubuntu-MySQL-VirtualBox:~$ more my_text.txt
+first line
+second line 
+third line
+
+student@Ubuntu-MySQL-VirtualBox:~$ ps
+  PID TTY          TIME CMD
+12379 pts/4    00:00:00 bash
+12848 pts/4    00:00:00 ps
+
+student@Ubuntu-MySQL-VirtualBox:~$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.3 120624  6776 ?        Ss   18:47   0:01 /sbin/init spla
+root         2  0.0  0.0      0     0 ?        S    18:47   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   18:47   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   18:47   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    18:47   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    18:47   0:00 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    18:47   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    18:47   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    18:47   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    18:47   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    18:47   0:00 [kdevtmpfs]
+root        14  0.0  0.0      0     0 ?        I<   18:47   0:00 [netns]
+root        15  0.0  0.0      0     0 ?        S    18:47   0:00 [rcu_tasks_kthr
+root        16  0.0  0.0      0     0 ?        S    18:47   0:00 [kauditd]
+root        17  0.0  0.0      0     0 ?        S    18:47   0:00 [khungtaskd]
+root        18  0.0  0.0      0     0 ?        S    18:47   0:00 [oom_reaper]
+root        19  0.0  0.0      0     0 ?        I<   18:47   0:00 [writeback]
+root        20  0.0  0.0      0     0 ?        S    18:47   0:00 [kcompactd0]
+root        21  0.0  0.0      0     0 ?        SN   18:47   0:00 [ksmd]
+root        22  0.0  0.0      0     0 ?        SN   18:47   0:00 [khugepaged]
+root        23  0.0  0.0      0     0 ?        I<   18:47   0:00 [crypto]
+root        24  0.0  0.0      0     0 ?        I<   18:47   0:00 [kintegrityd]
+root        25  0.0  0.0      0     0 ?        I<   18:47   0:00 [kblockd]
+root        26  0.0  0.0      0     0 ?        I<   18:47   0:00 [ata_sff]
+root        27  0.0  0.0      0     0 ?        I<   18:47   0:00 [md]
+root        28  0.0  0.0      0     0 ?        I<   18:47   0:00 [edac-poller]
+root        29  0.0  0.0      0     0 ?        I<   18:47   0:00 [devfreq_wq]
+root        30  0.0  0.0      0     0 ?        I<   18:47   0:00 [watchdogd]
+root        34  0.0  0.0      0     0 ?        S    18:47   0:00 [kswapd0]
+root        35  0.0  0.0      0     0 ?        I<   18:47   0:00 [kworker/u3:0]
+root        36  0.0  0.0      0     0 ?        S    18:47   0:00 [ecryptfs-kthre
+root        78  0.0  0.0      0     0 ?        I<   18:47   0:00 [kthrotld]
+root        79  0.0  0.0      0     0 ?        I<   18:47   0:00 [acpi_thermal_p
+root        80  0.0  0.0      0     0 ?        S    18:47   0:00 [scsi_eh_0]
+root        81  0.0  0.0      0     0 ?        I<   18:47   0:00 [scsi_tmf_0]
+root        82  0.0  0.0      0     0 ?        S    18:47   0:00 [scsi_eh_1]
+root        83  0.0  0.0      0     0 ?        I<   18:47   0:00 [scsi_tmf_1]
+root        89  0.0  0.0      0     0 ?        I<   18:47   0:00 [ipv6_addrconf]
+root        98  0.0  0.0      0     0 ?        I<   18:47   0:00 [kstrp]
+root       115  0.0  0.0      0     0 ?        I<   18:47   0:00 [charger_manage
+root       161  0.0  0.0      0     0 ?        I<   18:47   0:00 [kworker/0:1H]
+root       162  0.0  0.0      0     0 ?        S    18:47   0:00 [scsi_eh_2]
+root       163  0.0  0.0      0     0 ?        I<   18:47   0:00 [scsi_tmf_2]
+root       186  0.0  0.0      0     0 ?        S    18:47   0:00 [jbd2/sda1-8]
+root       187  0.0  0.0      0     0 ?        I<   18:47   0:00 [ext4-rsv-conve
+root       228  0.0  0.1  29756  3468 ?        Ss   18:47   0:00 /lib/systemd/sy
+root       244  0.0  0.1  35292  3568 ?        Ss   18:47   0:00 /lib/systemd/sy
+root       336  0.0  0.0      0     0 ?        I<   18:47   0:00 [iprt-VBoxWQueu
+root       415  0.0  0.0      0     0 ?        I<   18:47   0:00 [ttm_swap]
+root       643  0.0  0.1  28620  3096 ?        Ss   18:47   0:00 /lib/systemd/sy
+root       648  0.0  0.1  36076  3000 ?        Ss   18:47   0:00 /usr/sbin/cron 
+syslog     658  0.0  0.1 256392  3404 ?        Ssl  18:47   0:00 /usr/sbin/rsysl
+root       667  0.0  0.4 298808  8700 ?        Ssl  18:47   0:00 /usr/lib/accoun
+root       672  0.0  0.0   4396  1352 ?        Ss   18:47   0:00 /usr/sbin/acpid
+message+   692  0.0  0.2  44240  4880 ?        Ss   18:47   0:00 /usr/bin/dbus-d
+root       695  0.0  0.8 389660 17548 ?        Ssl  18:47   0:00 /usr/sbin/Netwo
+avahi      696  0.0  0.1  44784  3188 ?        Ss   18:47   0:00 avahi-daemon: r
+avahi      737  0.0  0.0  44784   336 ?        S    18:47   0:00 avahi-daemon: c
+root       749  0.0  0.5 304904 11172 ?        Ssl  18:47   0:00 /usr/lib/policy
+root       766  0.0  0.0      0     0 ?        I    18:47   0:00 [kworker/0:6]
+mysql      793  0.0  6.5 1107844 134584 ?      Ssl  18:47   0:01 /usr/sbin/mysql
+root       908  0.0  0.3 365896  7952 ?        Ssl  18:48   0:00 /usr/sbin/light
+root       952  0.6  4.4 438564 90444 tty7     Ssl+ 18:48   0:20 /usr/lib/xorg/X
+root       965  0.0  0.3 228240  6368 ?        Sl   18:48   0:00 lightdm --sessi
+student    970  0.0  0.2  45280  4644 ?        Ss   18:48   0:00 /lib/systemd/sy
+student    971  0.0  0.1  63436  2056 ?        S    18:48   0:00 (sd-pam)
+student    974  0.0  0.2  53892  5004 ?        Ss   18:48   0:00 /sbin/upstart -
+student    988  0.0  0.0  56664   308 ?        S    18:48   0:00 /usr/bin/VBoxCl
+student    989  0.0  0.2 124920  4284 ?        Sl   18:48   0:00 /usr/bin/VBoxCl
+student    999  0.0  0.0  56664   304 ?        S    18:48   0:00 /usr/bin/VBoxCl
+student   1000  0.0  0.1  56796  3440 ?        S    18:48   0:00 /usr/bin/VBoxCl
+student   1006  0.0  0.0  56664   308 ?        S    18:48   0:00 /usr/bin/VBoxCl
+student   1007  0.0  0.1 122848  2116 ?        Sl   18:48   0:00 /usr/bin/VBoxCl
+student   1013  0.0  0.0  56664   312 ?        S    18:48   0:00 /usr/bin/VBoxCl
+student   1014  0.1  0.1 123364  2176 ?        Sl   18:48   0:05 /usr/bin/VBoxCl
+student   1117  0.0  0.0  39992   280 ?        S    18:48   0:00 upstart-udev-br
+student   1122  0.0  0.2  43764  4224 ?        Ss   18:48   0:00 dbus-daemon --f
+student   1134  0.0  0.4  93412  8792 ?        Ss   18:48   0:00 /usr/lib/x86_64
+student   1165  0.0  0.0  39896   304 ?        S    18:48   0:00 upstart-dbus-br
+student   1167  0.0  0.0  39896   304 ?        S    18:48   0:00 upstart-dbus-br
+student   1169  0.0  0.3 212660  6972 ?        SLl  18:48   0:00 gnome-keyring-d
+student   1172  0.0  0.1  48576  2088 ?        S    18:48   0:00 upstart-file-br
+student   1173  0.0  2.6 648452 54312 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1188  0.0  0.4 365600  8580 ?        Ssl  18:48   0:01 /usr/bin/ibus-d
+student   1195  0.0  0.3 281816  6488 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+root      1198  0.0  0.1  16128  3648 ?        S    18:48   0:00 /sbin/dhclient 
+student   1207  0.0  0.3 419964  6872 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student   1217  0.0  0.4 284908  8248 ?        Sl   18:48   0:00 /usr/lib/ibus/i
+student   1222  0.0  0.4 353676  8184 ?        Sl   18:48   0:00 /usr/lib/at-spi
+student   1226  0.0  1.5 487724 30780 ?        Sl   18:48   0:00 /usr/lib/ibus/i
+student   1235  0.0  1.0 437980 21384 ?        Sl   18:48   0:00 /usr/lib/ibus/i
+nobody    1236  0.0  0.2  59972  4188 ?        S    18:48   0:00 /usr/sbin/dnsma
+student   1241  0.0  0.1  42888  3992 ?        S    18:48   0:00 /usr/bin/dbus-d
+student   1254  0.0  0.2 206972  5184 ?        Sl   18:48   0:00 /usr/lib/at-spi
+student   1358  0.0  0.3 209036  7456 ?        Sl   18:48   0:00 /usr/lib/ibus/i
+student   1418  0.0  0.0 174124   660 ?        Ss   18:48   0:00 gpg-agent --hom
+student   1660  0.0  1.8 655284 37404 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1665  0.0  1.6 864548 32736 ?        Ssl  18:48   0:00 /usr/lib/unity-
+student   1682  0.0  0.7 708040 15004 ?        Ssl  18:48   0:00 /usr/lib/gnome-
+student   1692  0.0  1.6 574872 33608 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+root      1776  0.0  0.4 354508 10004 ?        Ssl  18:48   0:00 /usr/lib/upower
+student   1815  0.0  0.4 377512  9276 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1816  0.0  0.3 356476  7788 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1817  0.0  0.5 368172 11452 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1826  0.0  0.8 788860 17756 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1829  0.0  1.3 667620 27824 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1833  0.0  0.6 683300 12568 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1838  0.0  1.2 557492 25284 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1842  0.0  0.4 643744  8716 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1850  0.0  0.6 403148 13052 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   1876  0.0  0.5 442376 11708 ?        S<l  18:48   0:00 /usr/bin/pulsea
+rtkit     1877  0.0  0.1 183544  2960 ?        SNsl 18:48   0:00 /usr/lib/rtkit/
+student   1901  0.0  1.1 638276 24260 ?        Sl   18:48   0:00 /usr/lib/evolut
+student   1911  0.0  0.2 178664  4836 ?        Sl   18:48   0:00 /usr/lib/dconf/
+colord    1912  0.0  0.6 320936 13088 ?        Ssl  18:48   0:00 /usr/lib/colord
+student   1930  1.7 13.4 1292824 275236 ?      Ssl  18:48   0:52 compiz
+student   1949  0.0  2.9 877476 60916 ?        Sl   18:48   0:00 /usr/lib/evolut
+student   1964  0.0  3.7 746180 75728 ?        SLl  18:48   0:00 /usr/bin/gnome-
+student   1967  0.0  1.5 647052 32604 ?        Sl   18:48   0:00 /usr/lib/policy
+student   1969  0.0  1.0 585180 22364 ?        Sl   18:48   0:00 /usr/lib/unity-
+student   1978  0.0  2.2 755652 45064 ?        Sl   18:48   0:00 nautilus -n
+student   1983  0.0  1.6 673372 33972 ?        Sl   18:48   0:00 nm-applet
+student   2014  0.0  2.5 822160 51396 ?        Sl   18:48   0:00 /usr/lib/evolut
+student   2020  0.0  0.4 377640 10048 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+root      2028  0.0  0.4 447892 10164 ?        Ssl  18:48   0:00 /usr/lib/udisks
+root      2043  0.0  1.6 518840 34164 ?        Ssl  18:48   0:00 /usr/lib/x86_64
+student   2050  0.0  0.2 278984  5044 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student   2055  0.0  0.2 266788  4568 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student   2060  0.0  0.4 410904  9028 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student   2068  0.0  0.2 264828  5564 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student   2075  0.0  2.4 814740 50572 ?        Sl   18:48   0:00 /usr/lib/evolut
+student   2082  0.0  0.9 704848 20032 ?        Sl   18:48   0:00 /usr/lib/evolut
+student   2089  0.0  0.9 788548 19708 ?        Sl   18:48   0:00 /usr/lib/evolut
+whoopsie  2091  0.0  0.6 378464 12592 ?        Ssl  18:48   0:00 /usr/bin/whoops
+root      2097  0.0  0.0  23004  1812 tty1     Ss+  18:48   0:00 /sbin/agetty --
+student   2115  0.0  0.4 371132  8728 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student   2189  0.0  0.7 497948 16268 ?        Sl   18:48   0:00 zeitgeist-datah
+student   2196  0.0  0.0   4504   712 ?        S    18:48   0:00 /bin/sh -c /usr
+student   2200  0.0  0.4 357996  9240 ?        Sl   18:48   0:00 /usr/bin/zeitge
+student   2208  0.0  0.7 321580 15648 ?        Sl   18:48   0:00 /usr/lib/x86_64
+student   2270  0.0  0.2 193272  5440 ?        Sl   18:48   0:00 /usr/lib/gvfs/g
+student  12219  0.0  1.2 606832 24516 ?        Sl   18:49   0:00 update-notifier
+student  12352  0.0  0.4 530708  9176 ?        Sl   18:50   0:00 /usr/lib/x86_64
+student  12372  0.2  1.9 673276 39388 ?        Sl   18:50   0:06 /usr/lib/gnome-
+student  12379  0.0  0.2  29504  4936 pts/4    Ss   18:50   0:00 bash
+student  12395  0.0  1.5 580000 32192 ?        Sl   18:52   0:00 deja-dup --prom
+root     12530  0.0  0.3 100572  7688 ?        Ss   18:52   0:00 /usr/sbin/cupsd
+root     12531  0.0  0.4 274812  9500 ?        Ssl  18:52   0:00 /usr/sbin/cups-
+lp       12536  0.0  0.2  81244  5684 ?        S    18:52   0:00 /usr/lib/cups/n
+lp       12537  0.0  0.2  81244  5612 ?        S    18:52   0:00 /usr/lib/cups/n
+lp       12538  0.0  0.2  81244  5596 ?        S    18:52   0:00 /usr/lib/cups/n
+root     12663  0.0  0.0      0     0 ?        I    19:07   0:00 [kworker/u2:1]
+root     12702  0.0  0.0      0     0 ?        I    19:19   0:00 [kworker/u2:0]
+root     12718  0.0  0.0      0     0 ?        I    19:24   0:00 [kworker/0:1]
+root     12757  0.0  0.2  65512  5464 ?        Ss   19:29   0:00 /usr/sbin/sshd 
+student  12772  0.0  0.8 654572 17964 ?        Sl   19:32   0:00 /usr/lib/x86_64
+student  12784  0.0  1.2 660088 25668 ?        Sl   19:32   0:00 /usr/bin/unity-
+student  12785  0.0  0.6 564288 13704 ?        Sl   19:32   0:00 /usr/lib/x86_64
+root     12852  0.0  0.0      0     0 ?        I    19:36   0:00 [kworker/u2:2]
+student  12871  0.0  0.3  69120  7916 pts/7    Ss+  19:38   0:00 mc
+student  12873  0.0  0.2  29544  5040 pts/18   Ss+  19:38   0:00 bash -rcfile .b
+student  12886  0.0  0.1  44448  3352 pts/4    R+   19:38   0:00 ps aux
+
+student@Ubuntu-MySQL-VirtualBox:~$ ps aux | grep mc
+student  12871  0.0  0.3  69120  7916 pts/7    Ss+  19:38   0:00 mc
+student  12888  0.0  0.0  21316  1088 pts/4    S+   19:38   0:00 grep --color=auto mc
+
+student@Ubuntu-MySQL-VirtualBox:~$ kill -s 9 12871
+
+student@Ubuntu-MySQL-VirtualBox:~$ ps aux | grep mc
+student  12892  0.0  0.0  21316   996 pts/4    S+   19:39   0:00 grep --color=auto mc
+
+student@Ubuntu-MySQL-VirtualBox:~$ 
