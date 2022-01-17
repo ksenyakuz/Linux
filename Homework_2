@@ -1,0 +1,223 @@
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install openssh-server -y
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующий пакет устанавливался автоматически и больше не требуется:
+  snapd-login-service
+Для его удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  openssh-client openssh-sftp-server
+Предлагаемые пакеты:
+  ssh-askpass libpam-ssh keychain monkeysphere rssh molly-guard
+Следующие пакеты будут обновлены:
+  openssh-client openssh-server openssh-sftp-server
+Обновлено 3 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 453 пакетов не обновлено.
+Необходимо скачать 963 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 1 024 B.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssh-sftp-server amd64 1:7.2p2-4ubuntu2.10 [38,8 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssh-server amd64 1:7.2p2-4ubuntu2.10 [335 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssh-client amd64 1:7.2p2-4ubuntu2.10 [590 kB]
+Получено 963 kB за 0с (1 875 kB/s)  
+Предварительная настройка пакетов ...
+(Чтение базы данных … на данный момент установлено 222153 файла и каталога.)
+Подготовка к распаковке …/openssh-sftp-server_1%3a7.2p2-4ubuntu2.10_amd64.deb …
+Распаковывается openssh-sftp-server (1:7.2p2-4ubuntu2.10) на замену (1:7.2p2-4ubuntu2.8) …
+Подготовка к распаковке …/openssh-server_1%3a7.2p2-4ubuntu2.10_amd64.deb …
+Распаковывается openssh-server (1:7.2p2-4ubuntu2.10) на замену (1:7.2p2-4ubuntu2.8) …
+Подготовка к распаковке …/openssh-client_1%3a7.2p2-4ubuntu2.10_amd64.deb …
+Распаковывается openssh-client (1:7.2p2-4ubuntu2.10) на замену (1:7.2p2-4ubuntu2.8) …
+Обрабатываются триггеры для man-db (2.7.5-1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.21) …
+Обрабатываются триггеры для ureadahead (0.100.0-19) …
+Обрабатываются триггеры для ufw (0.35-0ubuntu2) …
+Настраивается пакет openssh-client (1:7.2p2-4ubuntu2.10) …
+Настраивается пакет openssh-sftp-server (1:7.2p2-4ubuntu2.10) …
+Настраивается пакет openssh-server (1:7.2p2-4ubuntu2.10) …
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl start ssh
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV init with /lib/systemd/systemd-sysv-install...
+Executing /lib/systemd/systemd-sysv-install enable ssh
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+   Active: active (running) since Ср 2021-12-22 15:05:39 MSK; 2min 23s ago
+ Main PID: 4890 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─4890 /usr/sbin/sshd -D
+
+дек 22 15:05:38 Ubuntu-MySQL-VirtualBox systemd[1]: Starting OpenBSD Secure Shell server...
+дек 22 15:05:39 Ubuntu-MySQL-VirtualBox sshd[4890]: Server listening on 0.0.0.0 port 22.
+дек 22 15:05:39 Ubuntu-MySQL-VirtualBox sshd[4890]: Server listening on :: port 22.
+дек 22 15:05:39 Ubuntu-MySQL-VirtualBox systemd[1]: Started OpenBSD Secure Shell server.
+дек 22 15:06:56 Ubuntu-MySQL-VirtualBox systemd[1]: Started OpenBSD Secure Shell server.
+
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+student@Ubuntu-MySQL-VirtualBox:~$ mkdir /home/student/students
+student@Ubuntu-MySQL-VirtualBox:~$ mkdir /home/student/mentors
+student@Ubuntu-MySQL-VirtualBox:~$ cd /home/student/students
+student@Ubuntu-MySQL-VirtualBox:~/students$ touch students_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/students$ cd /home/student/mentors
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ touch mentors_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ cd ~
+student@Ubuntu-MySQL-VirtualBox:~$ nano students_list.txt
+student@Ubuntu-MySQL-VirtualBox:~$ nano mentors_list.txt
+student@Ubuntu-MySQL-VirtualBox:~$ cat students_list.txt
+Ksenya
+Marina
+Ivan
+Alexandr
+Anton
+Mikhail
+Artem
+Evgenya
+Maria
+Pavel
+Arina
+Elizaveta
+Anna
+Polina
+Natalia
+
+student@Ubuntu-MySQL-VirtualBox:~$ cat mentors_list.txt
+Kirill
+Natalia
+Alena
+Elena
+Arslan
+
+student@Ubuntu-MySQL-VirtualBox:~$ mv /home/student/mentors/mentors_list.txt /home/student/students/mentors_list.txt
+student@Ubuntu-MySQL-VirtualBox:~$ ls -l
+итого 60
+-rw-r--r-- 1 student student 8980 апр 22  2019 examples.desktop
+drwxrwxr-x 2 student student 4096 дек 22 15:31 mentors
+-rw-rw-r-- 1 student student   34 дек 22 15:22 mentors_list.txt
+drwxrwxr-x 2 student student 4096 дек 22 15:31 students
+-rw-rw-r-- 1 student student  105 дек 22 15:21 students_list.txt
+drwxr-xr-x 2 student student 4096 апр 22  2019 Видео
+drwxr-xr-x 2 student student 4096 апр 22  2019 Документы
+drwxr-xr-x 2 student student 4096 апр 22  2019 Загрузки
+drwxr-xr-x 2 student student 4096 апр 22  2019 Изображения
+drwxr-xr-x 2 student student 4096 апр 22  2019 Музыка
+drwxr-xr-x 2 student student 4096 апр 22  2019 Общедоступные
+drwxr-xr-x 2 student student 4096 апр 22  2019 Рабочий стол
+drwxr-xr-x 2 student student 4096 апр 22  2019 Шаблоны
+student@Ubuntu-MySQL-VirtualBox:~$ tree
+Программа 'tree' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt install tree
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install tree
+[sudo] пароль для student: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующий пакет устанавливался автоматически и больше не требуется:
+  snapd-login-service
+Для его удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  tree
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 453 пакетов не обновлено.
+Необходимо скачать 40,6 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 138 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial/universe amd64 tree amd64 1.7.0-3 [40,6 kB]
+Получено 40,6 kB за 0с (444 kB/s)
+Выбор ранее не выбранного пакета tree.
+(Чтение базы данных … на данный момент установлено 222153 файла и каталога.)
+Подготовка к распаковке …/tree_1.7.0-3_amd64.deb …
+Распаковывается tree (1.7.0-3) …
+Обрабатываются триггеры для man-db (2.7.5-1) …
+Настраивается пакет tree (1.7.0-3) …
+
+student@Ubuntu-MySQL-VirtualBox:~$ tree
+.
+├── examples.desktop
+├── mentors
+├── mentors_list.txt
+├── students
+│   ├── mentors_list.txt
+│   └── students_list.txt
+├── students_list.txt
+├── Видео
+├── Документы
+├── Загрузки
+├── Изображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+└── Шаблоны
+
+10 directories, 5 files
+student@Ubuntu-MySQL-VirtualBox:~$ rm mentors -rf
+student@Ubuntu-MySQL-VirtualBox:~$ tree
+.
+├── examples.desktop
+├── mentors_list.txt
+├── students
+│   ├── mentors_list.txt
+│   └── students_list.txt
+├── students_list.txt
+├── Видео
+├── Документы
+├── Загрузки
+├── Изображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+└── Шаблоны
+
+9 directories, 5 files
+student@Ubuntu-MySQL-VirtualBox:~$ mv students students_and_mentors
+student@Ubuntu-MySQL-VirtualBox:~$ tree
+.
+├── examples.desktop
+├── mentors_list.txt
+├── students_and_mentors
+│   ├── mentors_list.txt
+│   └── students_list.txt
+├── students_list.txt
+├── Видео
+├── Документы
+├── Загрузки
+├── Изображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+└── Шаблоны
+
+9 directories, 5 files
+student@Ubuntu-MySQL-VirtualBox:~$ rm students_and_mentors -rf
+student@Ubuntu-MySQL-VirtualBox:~$ tree
+.
+├── examples.desktop
+├── mentors_list.txt
+├── students_list.txt
+├── Видео
+├── Документы
+├── Загрузки
+├── Изображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+└── Шаблоны
+
+8 directories, 3 files
+student@Ubuntu-MySQL-VirtualBox:~$ hostname -I
+192.168.0.47 
+student@Ubuntu-MySQL-VirtualBox:~$ 
+
+
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Могут быть обновлены 464 пакета.
+405 обновлений касаются безопасности системы.
+
+Last login: Mon Apr 22 18:52:20 2019 from 192.168.1.117
+student@Ubuntu-MySQL-VirtualBox:~$ hostname
+Ubuntu-MySQL-VirtualBox
+student@Ubuntu-MySQL-VirtualBox:~$ hostname -I
+192.168.0.47
+
