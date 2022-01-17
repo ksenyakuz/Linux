@@ -1,0 +1,16 @@
+student@Ubuntu-MySQL-VirtualBox:~$ uname
+Linux
+student@Ubuntu-MySQL-VirtualBox:~$ whoami
+student
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+student@Ubuntu-MySQL-VirtualBox:~$ hostnamectl
+   Static hostname: Ubuntu-MySQL-VirtualBox
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 6917807b2dca43d681d86ffe5ca8e5d1
+           Boot ID: 4f1789cbfa3a46038379d908cfd17edc
+    Virtualization: oracle
+  Operating System: Ubuntu 16.04.6 LTS
+            Kernel: Linux 4.15.0-47-generic
+      Architecture: x86-64
