@@ -1,0 +1,165 @@
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $key
+[sudo] пароль для student: 
+Executing: /tmp/tmp.nSvV5vsbPK/gpg.1.sh --keyserver
+keyserver.ubuntu.com
+--recv-keys
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu xenial InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu xenial-updates InRelease                                         
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu xenial-backports InRelease                                       
+Сущ:4 http://security.ubuntu.com/ubuntu xenial-security InRelease                                          
+Чтение списков пакетов… Готово                                       
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Все пакеты имеют последние версии.
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  linux-headers-4.15.0-45 linux-headers-4.15.0-45-generic linux-image-4.15.0-45-generic
+  linux-modules-4.15.0-45-generic linux-modules-extra-4.15.0-45-generic snapd-login-service
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  nginx-common nginx-core
+Предлагаемые пакеты:
+  fcgiwrap nginx-doc
+Следующие НОВЫЕ пакеты будут установлены:
+  nginx nginx-common nginx-core
+Обновлено 0 пакетов, установлено 3 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+Необходимо скачать 460 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 1 485 kB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx-common all 1.10.3-0ubuntu0.16.04.5 [26,9 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx-core amd64 1.10.3-0ubuntu0.16.04.5 [429 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 nginx all 1.10.3-0ubuntu0.16.04.5 [3 494 B]
+Получено 460 kB за 0с (1 124 kB/s)
+Предварительная настройка пакетов ...
+Выбор ранее не выбранного пакета nginx-common.
+(Чтение базы данных … на данный момент установлен 257881 файл и каталог.)
+Подготовка к распаковке …/nginx-common_1.10.3-0ubuntu0.16.04.5_all.deb …
+Распаковывается nginx-common (1.10.3-0ubuntu0.16.04.5) …
+Выбор ранее не выбранного пакета nginx-core.
+Подготовка к распаковке …/nginx-core_1.10.3-0ubuntu0.16.04.5_amd64.deb …
+Распаковывается nginx-core (1.10.3-0ubuntu0.16.04.5) …
+Выбор ранее не выбранного пакета nginx.
+Подготовка к распаковке …/nginx_1.10.3-0ubuntu0.16.04.5_all.deb …
+Распаковывается nginx (1.10.3-0ubuntu0.16.04.5) …
+Обрабатываются триггеры для ureadahead (0.100.0-19.1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.31) …
+Обрабатываются триггеры для ufw (0.35-0ubuntu2) …
+Настраивается пакет nginx-common (1.10.3-0ubuntu0.16.04.5) …
+Настраивается пакет nginx-core (1.10.3-0ubuntu0.16.04.5) …
+Настраивается пакет nginx (1.10.3-0ubuntu0.16.04.5) …
+Обрабатываются триггеры для ureadahead (0.100.0-19.1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.31) …
+Обрабатываются триггеры для ufw (0.35-0ubuntu2) …
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu xenial InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu xenial-updates InRelease                                         
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu xenial-backports InRelease                                       
+Сущ:4 http://security.ubuntu.com/ubuntu xenial-security InRelease                                          
+Чтение списков пакетов… Готово            
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Все пакеты имеют последние версии.
+
+student@Ubuntu-MySQL-VirtualBox:~$ apt show nginx
+Package: nginx
+Version: 1.10.3-0ubuntu0.16.04.5
+Priority: optional
+Section: web
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kartik Mistry <kartik@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 38,9 kB
+Depends: nginx-core (>= 1.10.3-0ubuntu0.16.04.5) | nginx-full (>= 1.10.3-0ubuntu0.16.04.5) | nginx-light (>= 1.10.3-0ubuntu0.16.04.5) | nginx-extras (>= 1.10.3-0ubuntu0.16.04.5), nginx-core (<< 1.10.3-0ubuntu0.16.04.5.1~) | nginx-full (<< 1.10.3-0ubuntu0.16.04.5.1~) | nginx-light (<< 1.10.3-0ubuntu0.16.04.5.1~) | nginx-extras (<< 1.10.3-0ubuntu0.16.04.5.1~)
+Homepage: http://nginx.net
+Supported: 5y
+Download-Size: 3 494 B
+APT-Manual-Installed: yes
+APT-Sources: http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages
+Description: small, powerful, scalable web/proxy server
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This is a dependency package to install either nginx-core (by default),
+ nginx-full, nginx-light, or nginx-extras.
+N: Есть 1 дополнительная запись. Используйте «-a» для просмотра.
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo dpkg -r nginx
+(Чтение базы данных … на данный момент установлено 257935 файлов и каталогов.)
+Удаляется nginx (1.10.3-0ubuntu0.16.04.5) …
+
+student@Ubuntu-MySQL-VirtualBox:~$ dpkg -l nginx
+Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать[h]
+| Состояние=не[n]/установлен[i]/настроен[c]/распакован[U]/частично настроен[F]/
+            частично установлен[H]/trig-aWait/Trig-pend
+|/ Ошибка?=(нет)/требуется переустановка[R] (верхний регистр
+в полях состояния и ошибки указывает на ненормальную ситуацию)
+||/ Имя                   Версия          Архитектура     Описание
++++-=====================-===============-===============-===============================================
+un  nginx                 <нет>           <нет>           (описание недоступно)
+
+student@Ubuntu-MySQL-VirtualBox:~$ snap find opera
+Name                 Version       Publisher             Notes    Summary
+opera                83.0.4254.27  opera-software✓       -        Fast, secure, easy-to-use browser
+opera-beta           83.0.4254.16  opera-software✓       -        Fast and secure web browser
+opera-developer      84.0.4309.0   opera-software✓       -        Fast and secure web browser
+opera-proxy          1.2.2         snawoot               -        Standalone Opera VPN proxies client.
+operator-builder     0.5.0         vmware-tanzu-labs     -        A Kubebuilder plugin to accelerate the development of Kubernetes operators.
+rpncalc              3.2.2         michael-fross         -        RPNCalc is the Command Line Reverse Polish Notation (RPN) Style Calculator
+contasimple          3.1.0         enriverd              -        Contasimple Desktop
+office365webdesktop  0.7.0         rafgui012             -        It is a simple desktop application for Office365 of the web version for linux
+livepraise           0.0.2         thiagolucenasobrinho  -        Live Praise
+devoperator          1.7.1         art-hens-teeth        classic  DevOps tools
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo snap install opera
+2022-01-27T14:31:35+03:00 INFO Waiting for automatic snapd restart...
+opera 83.0.4254.27 from Opera (opera-software✓) installed
+
+student@Ubuntu-MySQL-VirtualBox:~$ snap list
+Name               Version                     Rev    Tracking       Publisher        Notes
+bare               1.0                         5      latest/stable  canonical✓       base
+chromium-ffmpeg    0.1                         24     latest/stable  canonical✓       -
+core18             20211215                    2284   latest/stable  canonical✓       base
+gnome-3-28-1804    3.28.0-19-g98f9e67.98f9e67  161    latest/stable  canonical✓       -
+gtk-common-themes  0.1-59-g7bca6ae             1519   latest/stable  canonical✓       -
+opera              83.0.4254.27                160    latest/stable  opera-software✓  -
+snapd              2.54.2                      14549  latest/stable  canonical✓       snapd
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy DROP)
+target     prot opt source               destination
+         
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables --policy OUTPUT DROP
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy DROP)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http
+
+student@Ubuntu-MySQL-VirtualBox:~$ 
+
