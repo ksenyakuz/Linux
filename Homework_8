@@ -1,0 +1,229 @@
+student@Ubuntu-MySQL-VirtualBox:~$ docker --help
+Программа 'docker' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt install docker.io
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install docker.io
+[sudo] пароль для student: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  linux-headers-4.15.0-45 linux-headers-4.15.0-45-generic linux-image-4.15.0-45-generic linux-modules-4.15.0-45-generic
+  linux-modules-extra-4.15.0-45-generic nginx-common nginx-core snapd-login-service
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  bridge-utils cgroupfs-mount containerd git git-man liberror-perl pigz runc ubuntu-fan
+Предлагаемые пакеты:
+  aufs-tools btrfs-tools debootstrap docker-doc rinse zfs-fuse | zfsutils git-daemon-run | git-daemon-sysvinit git-doc git-el
+  git-email git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn
+Следующие НОВЫЕ пакеты будут установлены:
+  bridge-utils cgroupfs-mount containerd docker.io git git-man liberror-perl pigz runc ubuntu-fan
+Обновлено 0 пакетов, установлено 10 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+Необходимо скачать 56,4 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 283 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial/universe amd64 pigz amd64 2.3.1-2 [61,1 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu xenial/main amd64 bridge-utils amd64 1.5-9ubuntu1 [28,6 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu xenial/universe amd64 cgroupfs-mount all 1.2 [4 970 B]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 runc amd64 1.0.0~rc7+git20190403.029124da-0ubuntu1~16.04.4 [1 890 kB]
+Пол:5 http://ru.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 containerd amd64 1.2.6-0ubuntu1~16.04.6 [19,9 MB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 docker.io amd64 18.09.7-0ubuntu1~16.04.7 [30,5 MB]       
+Пол:7 http://ru.archive.ubuntu.com/ubuntu xenial/main amd64 liberror-perl all 0.17-1.2 [19,6 kB]                                 
+Пол:8 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 git-man all 1:2.7.4-0ubuntu1.10 [737 kB]                     
+Пол:9 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 git amd64 1:2.7.4-0ubuntu1.10 [3 183 kB]                     
+Пол:10 http://ru.archive.ubuntu.com/ubuntu xenial-updates/main amd64 ubuntu-fan all 0.12.8~16.04.3 [35,1 kB]                     
+Получено 56,4 MB за 1мин 43с (547 kB/s)                                                                                          
+Предварительная настройка пакетов ...
+Выбор ранее не выбранного пакета pigz.
+(Чтение базы данных … на данный момент установлено 257836 файлов и каталогов.)
+Подготовка к распаковке …/pigz_2.3.1-2_amd64.deb …
+Распаковывается pigz (2.3.1-2) …
+Выбор ранее не выбранного пакета bridge-utils.
+Подготовка к распаковке …/bridge-utils_1.5-9ubuntu1_amd64.deb …
+Распаковывается bridge-utils (1.5-9ubuntu1) …
+Выбор ранее не выбранного пакета cgroupfs-mount.
+Подготовка к распаковке …/cgroupfs-mount_1.2_all.deb …
+Распаковывается cgroupfs-mount (1.2) …
+Выбор ранее не выбранного пакета runc.
+Подготовка к распаковке …/runc_1.0.0~rc7+git20190403.029124da-0ubuntu1~16.04.4_amd64.deb …
+Распаковывается runc (1.0.0~rc7+git20190403.029124da-0ubuntu1~16.04.4) …
+Выбор ранее не выбранного пакета containerd.
+Подготовка к распаковке …/containerd_1.2.6-0ubuntu1~16.04.6_amd64.deb …
+Распаковывается containerd (1.2.6-0ubuntu1~16.04.6) …
+Выбор ранее не выбранного пакета docker.io.
+Подготовка к распаковке …/docker.io_18.09.7-0ubuntu1~16.04.7_amd64.deb …
+Распаковывается docker.io (18.09.7-0ubuntu1~16.04.7) …
+Выбор ранее не выбранного пакета liberror-perl.
+Подготовка к распаковке …/liberror-perl_0.17-1.2_all.deb …
+Распаковывается liberror-perl (0.17-1.2) …
+Выбор ранее не выбранного пакета git-man.
+Подготовка к распаковке …/git-man_1%3a2.7.4-0ubuntu1.10_all.deb …
+Распаковывается git-man (1:2.7.4-0ubuntu1.10) …
+Выбор ранее не выбранного пакета git.
+Подготовка к распаковке …/git_1%3a2.7.4-0ubuntu1.10_amd64.deb …
+Распаковывается git (1:2.7.4-0ubuntu1.10) …
+Выбор ранее не выбранного пакета ubuntu-fan.
+Подготовка к распаковке …/ubuntu-fan_0.12.8~16.04.3_all.deb …
+Распаковывается ubuntu-fan (0.12.8~16.04.3) …
+Обрабатываются триггеры для man-db (2.7.5-1) …
+Обрабатываются триггеры для ureadahead (0.100.0-19.1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.31) …
+Настраивается пакет pigz (2.3.1-2) …
+Настраивается пакет bridge-utils (1.5-9ubuntu1) …
+Настраивается пакет cgroupfs-mount (1.2) …
+Настраивается пакет runc (1.0.0~rc7+git20190403.029124da-0ubuntu1~16.04.4) …
+Настраивается пакет containerd (1.2.6-0ubuntu1~16.04.6) …
+Настраивается пакет docker.io (18.09.7-0ubuntu1~16.04.7) …
+Добавляется группа «docker» (GID 131) ...
+Готово.
+Настраивается пакет liberror-perl (0.17-1.2) …
+Настраивается пакет git-man (1:2.7.4-0ubuntu1.10) …
+Настраивается пакет git (1:2.7.4-0ubuntu1.10) …
+Настраивается пакет ubuntu-fan (0.12.8~16.04.3) …
+Обрабатываются триггеры для ureadahead (0.100.0-19.1) …
+Обрабатываются триггеры для systemd (229-4ubuntu21.31) …
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install docker -y
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  linux-headers-4.15.0-45 linux-headers-4.15.0-45-generic linux-image-4.15.0-45-generic linux-modules-4.15.0-45-generic
+  linux-modules-extra-4.15.0-45-generic nginx-common nginx-core snapd-login-service
+Для их удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  docker
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+Необходимо скачать 12,2 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 65,5 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu xenial/universe amd64 docker amd64 1.5-1 [12,2 kB]
+Получено 12,2 kB за 0с (162 kB/s)
+Выбор ранее не выбранного пакета docker.
+(Чтение базы данных … на данный момент установлено 258963 файла и каталога.)
+Подготовка к распаковке …/docker_1.5-1_amd64.deb …
+Распаковывается docker (1.5-1) …
+Обрабатываются триггеры для man-db (2.7.5-1) …
+Настраивается пакет docker (1.5-1) …
+
+student@Ubuntu-MySQL-VirtualBox:~$ docker --help
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/student/.docker")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/student/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/student/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/student/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  deploy      Deploy a new stack or update an existing stack
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+08c01a0ec47e: Pull complete 
+Digest: sha256:669e010b58baf5beb2836b253c1fd5768333f0d1dbcb834f7c07a4dc93f474be
+Status: Downloaded newer image for ubuntu:latest
+root@d90b56350e75:/# exit
+exit
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+d90b56350e75        ubuntu              "bash"              57 seconds ago      Exited (0) 5 seconds ago                       loving_bhaskara
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              54c9d81cbb44        40 hours ago        72.8MB
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker stop d90b56350e75
+d90b56350e75
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+d90b56350e75        ubuntu              "bash"              7 minutes ago       Exited (0) 6 minutes ago                       loving_bhaskara
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker rm d90b56350e75
+d90b56350e75
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+student@Ubuntu-MySQL-VirtualBox:~$ 
