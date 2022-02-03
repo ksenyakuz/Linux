@@ -1,3 +1,7 @@
+# Обзавестись установленной версией Linux Ubuntu.
+В качестве решения необходимо прислать текстовый файл (*.txt) с кодом команды, выводящей информацию о версии ОС (вместе с результатом работы этой команды)
+
+
 student@Ubuntu-MySQL-VirtualBox:~$ uname
 Linux
 student@Ubuntu-MySQL-VirtualBox:~$ whoami
