@@ -1,3 +1,9 @@
+# 1. Подключить репозиторий с nginx любым удобным способом, установить nginx и потом удалить nginx, используя утилиту dpkg.
+2. Установить пакет на свой выбор, используя snap.
+3. Настроить iptables: разрешить подключения только на 22-й и 80-й порты.
+4. * Настроить проброс портов локально с порта 80 на порт 8080.
+
+
 student@Ubuntu-MySQL-VirtualBox:~$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $key
 [sudo] пароль для student: 
 Executing: /tmp/tmp.nSvV5vsbPK/gpg.1.sh --keyserver
